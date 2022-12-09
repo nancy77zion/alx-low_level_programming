@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main print - the phrase
+ * main - prints the phrase
  * followed by a new line, to the standard error.
  * Return: (0)
  */
