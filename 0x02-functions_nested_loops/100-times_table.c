@@ -41,7 +41,7 @@ void print_times_table(int n)
 					_putchar((product % 1) + '0');
 				}
 			}
-			_putchat('\n');
+			_putchar('\n');
 		}
 	}
 }
