@@ -1,38 +1,28 @@
 /**
- * _strspn - a function that gets the
- * length of a prexif substring
+ * _strchr - a function that locates a character in a string
  *
- * @s: pointer to string input
- * @accept: substring prefix to look for
+ * @s: pointer to string array input
+ * @c: character to locate from imput array
  *
- * Return: the number of bytes in the initial segment
+ * Return: the first occurence of charcter or null if not found
  */
 
-unsigned int _strspn(char *s, char *accept)
+
+char *_strchr(char *s, char c)
 {
-	int i, j, f;
-
-	i = 0;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		j = 0;
-		f = 1; /*flag status*/
-
-		while (accept[j] != '\0')
-		{
-			if (s[i] == accept[j])
-			{
-				f = 0; /*success*/
-				break;
-			}
-			j++;
-		}
-
-		if (f == 1)
-			break;
-
-		i++;
+		if (*s == c)
+			return (s);
+		s++;
 	}
-
-	return (i);
+	/**
+	 * if c is '\0', you should return
+	 * the pointer to the '\0' of the
+	 * string s
+	 */
+	if (*s == c)
+		return (s);
+	/*return null if not found*/
+	return ('\0');
 }
