@@ -7,7 +7,6 @@
  * Return: the first occurence of charcter or null if not found
  */
 
-
 char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
